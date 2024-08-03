@@ -1,66 +1,212 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+    <title>Portfólio - Davi Rios</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" href="imgs/flavicon.svg" type="image/x-icon">
 </head>
+
 <body>
-    <nav id="navbar">
+    <header>
+        <nav class="navbar">
         <ul>
-            <li><a href="#welcome-section">Welcome</a></li>
-            <li><a href="#about-section">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a id="profile-link" href="https://github.com/DaviRios" target="_blank">GitHub Profile</a></li>
+            <li><a href="#about-me">Sobre Mim</a></li>
+            <li><a href="#hab">Habilidades</a></li>
+            <li><a href="#projetos">Projetos</a></li>
+            <li><a href="#contact">Contato</a></li>
         </ul>
     </nav>
+        <div class="card">
+            <svg viewBox="0 0 100% 100%" xmlns='http://www.w3.org/2000/svg' class="noise">
+                <filter id='noiseFilter'>
+                    <feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='6' stitchTiles='stitch' />
+                </filter>
 
-    <section id="welcome-section">
-        <h1>Welcome to My Portfolio</h1>
-        <p>Hi, I'm Davi, a passionate developer specialized in building beautiful and functional web applications.</p>
+                <rect width='100%' height='100%' preserveAspectRatio="xMidYMid meet" filter='url(#noiseFilter)' />
+            </svg>
+
+            <div class="content">
+                <h1 class="nome">Davi Rios</h1>
+                <img src="imgs/Davi_pic.png" alt="foto" class="minhaImg">
+            </div>
+        </div>
+
+        <div class="gradient-bg">
+            <svg viewBox="0 0 100vw 100vw" xmlns='http://www.w3.org/2000/svg' class="noiseBg">
+                <filter id='noiseFilterBg'>
+                    <feTurbulence type='fractalNoise' baseFrequency='0.6' stitchTiles='stitch' />
+                </filter>
+
+                <rect width='100%' height='100%' preserveAspectRatio="xMidYMid meet" filter='url(#noiseFilterBg)' />
+            </svg>
+            <svg xmlns="http://www.w3.org/2000/svg" class="svgBlur">
+                <defs>
+                    <filter id="goo">
+                        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                        <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" 
+                            result="goo" />
+                        <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                </defs>
+            </svg>
+            <div class="gradients-container">
+                <div class="g1"></div>
+                <div class="g2"></div>
+                <div class="g3"></div>
+                <div class="g4"></div>
+                <div class="g5"></div>
+                <div class="interactive"></div>
+            </div>
+        </div>
+    </header>
+
+    <section class="about-me">
+        <h1>Sobre Mim</h1>
+        <p>A dedicated software developer hailing from Brazil, I bring a fervent commitment to crafting innovative 
+            and efficient solutions. With a profound understanding of software architecture and a keen eye for detail, 
+            I thrive in transforming complex challenges into streamlined, user-friendly applications. </p>
     </section>
 
-    <section id="about-section">
-        <h2>About Me</h2>
-        <p>A dedicated software developer hailing from Brazil, I bring a fervent commitment to crafting innovative and efficient solutions. With a profound understanding of software architecture and a keen eye for detail, I thrive in transforming complex challenges into streamlined, user-friendly applications. My journey in the realm of coding is fueled by a relentless pursuit of excellence, constantly staying abreast of the latest technologies and methodologies. Drawing inspiration from Brazil's vibrant tech community, I contribute my skills to the ever-evolving landscape of software development. As a versatile problem-solver, I am driven by the passion to create impactful and scalable software solutions that resonate with users across diverse domains.
-            I’m currently working on evolving my programming skills.
-            
-            I’m currently learning front-end, but I have a strong background in back-end development.
-            
-            I’m looking to collaborate on the creation of websites or back-end projects.
-            
-            I’m looking for help with ideas to participate in, enriching my repertoire.
-            
-            All of my projects are available at github
-            
-            Ask me about programming logic, design, geek themes, and various technologies.
-            
-            How to reach me Feel free to send me a message via LinkedIn or email (astroSurfer.50@gmail.com / soirivad@outlook.com) ;)</p>
+    <section class="hab">
+        <h2 style="text-align: center; margin-top: 30px;">Habilidades</h2>
+        <div class="container">
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5">
+                <h3>HTML5</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3">
+                <h3>CSS3</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg"
+                    alt="JavaScript">
+                <h3>JavaScript</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"
+                    alt="TypeScript">
+                <h3>TypeScript</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React.js">
+                <h3>React.js</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg" alt="GitHub">
+                <h3>GitHub</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" alt="Node.js">
+                <h3>Node.js</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" alt="Python">
+                <h3>Python</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                <h3>Java</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg" alt="C#">
+                <h3>C#</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                <h3>MySQL</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/wordpress/wordpress-original.svg"
+                    alt="WordPress">
+                <h3>WordPress</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL">
+                <h3>My SQL</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mongodb/mongodb-original.svg"
+                    alt="MongoDB">
+                <h3>MongoDB</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/swift/swift-original.svg" alt="Swift">
+                <h3>Swift</h3>
+            </div>
+            <div class="skill">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg" alt="MongoDB">
+                <h3>Figma</h3>
+            </div>
+        </div>
     </section>
 
-    <section id="projects">
-        <h2>Projects</h2>
-        <div class="project-tile">
-            <h3>Survey Form</h3>
-            <p>A simple form to get data from our visitors.</p>
-            <img src="imgs/Survey.png" alt="Project 1 Screenshot">
+    <!-- <section id="projetos">
+        <h2 class="tituloProjetos">Meus Projetos</h2>
+
+        <div class="container">
+            <div class="container">
+                <div class="projeto">
+                    <img src="imgs/caixeiro.png" alt="Problema dos Multiplos Caixeiros Viajantes">
+                    <a href="https://github.com/claraandradee/Multiple-Traveling-Salesman-Problem-II"
+                        target="_blank">Multiple Traveling Salesman</a>
+                </div>
+
+                <div class="projeto">
+                    <img src="imgs/solarSystem.png" alt="Sistema Solar">
+                    <a href="https://github.com/claraandradee/Solar-System" target="_blank">Solar System</a>
+                </div>
+
+                <div class="projeto">
+                    <img src="imgs/trainNetwork.png" alt="Rede de Trens">
+                    <a href="https://github.com/claraandradee/TrainNetwork" target="_blank">Train Network</a>
+                </div>
+
+                <div class="projeto">
+                    <img src="imgs/doeVida.png" alt="Doe Vida">
+                    <a href="https://github.com/claraandradee/DoeVida" target="_blank">Doe Vida</a>
+                </div>
+
+                <div class="projeto">
+                    <img src="imgs/tcc.png" alt="Fire Forecast">
+                    <a href="https://github.com/claraandradee/firstPrototype_FireForecast" target="_blank">Fire
+                        Forecast</a>
+                </div>
+
+                <div class="projeto">
+                    <img src="imgs/forca.png" alt="Jogo da Forca">
+                    <a href="https://github.com/claraandradee/JavaHangman" target="_blank">Jogo da Forca</a>
+                </div>
+
+            </div>
         </div>
-        <div class="project-tile">
-            <h3>Technical Documentation
-            </h3>
-            <p>A Document page of Java, Javascript, HTML, CSS, Python and Version Control.</p>
-            <img src="imgs/Doc.png" alt="Project 2 Screenshot">
+    </section> -->
+
+    <div class="contact" id="contact">
+        <h2>Contato</h2>
+        <div class="buttons">
+            <img src="imgs/whatsapp.png" class="contact-button" class="fas fa-phone">
+            <img src="imgs/o-email.png" class="contact-button" class="fas fa-phone">
+            <img src="imgs/linkedin.png" class="contact-button" class="fas fa-phone">
+            <img src="imgs/github.png" class="contact-button" class="fas fa-phone">
         </div>
-        <div class="project-tile">
-            <h3>Tribute Page</h3>
-            <p>A tribute page for Alexander, a special character.</p>
-            <img src="imgs/Tribute.png" alt="Project 3 Screenshot">
+        <div class="social-names">
+            <a href="https://wa.me/5519987716606" target="_blank">Whatsapp</a>
+            <a href="mailto:soirivad@gmail.com" target="_blank">Email</a>
+            <a href="https://www.linkedin.com/in/davi-rios-779796180/" target="_blank">LinkedIn</a>
+            <a href="https://github.com/DaviRios" target="_blank">GitHub</a>
         </div>
-    </section>
+    </div>
 
     <footer>
-        <p>&copy; 2024 Davi. All rights reserved.</p>
+        <p>&copy; 2024 Davi Rios. All rights reserved.</p>
     </footer>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
 </body>
+
 </html>
