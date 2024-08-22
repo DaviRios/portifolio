@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 :root {
-    --color1: #1094E9; /* Cor principal */
+    --color1: #1094E9;
+    /* Cor principal */
     --color2: #105ce9;
 }
 
@@ -22,7 +23,8 @@ body {
     color: #ff0;
 }
 
-html, body {
+html,
+body {
     width: 100%;
     overflow-x: hidden;
 }
@@ -94,15 +96,15 @@ header {
     width: 60px;
 }
 
-.mainP{
-   position: absolute;
-   background-color: var(--color1);
-   width: 500px;
-   height: 500px;
-   left: auto;
-   right: 10vw;
-   top: 30%;
-   border-radius: 20px;
+.mainP {
+    position: absolute;
+    background-color: var(--color1);
+    width: 500px;
+    height: 500px;
+    left: auto;
+    right: 10vw;
+    top: 30%;
+    border-radius: 20px;
 }
 
 .mainP .person {
@@ -146,7 +148,7 @@ header {
     width: 40vw;
 }
 
-.about-me p span{
+.about-me p span {
     font-size: 40px;
     font-weight: bold;
     color: var(--color1);
@@ -159,38 +161,52 @@ header {
 .hab .container {
     position: absolute;
     top: 100vh;
+    left: 2vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 20px;
-  }
-  
-  
-  .hab .skill {
-    color:black;
+}
+
+.hab .skill {
+    color: black;
     width: 150px;
     height: 150px;
     margin: 10px;
-    background-color: var(--color1); /* Dourado e laranja */
+    background-color: var(--color1);
+    /* Dourado e laranja */
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
     cursor: pointer;
-  }
-  
-  .hab .skill:hover {
+    padding: 40px 10px 10px 10px;
+}
+
+.hab .skill:hover {
     transform: translateY(-5px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background-color: var(--color2);
-  }
-  
-  .hab .skill img {
+}
+
+.hab .skill img {
     width: 50px;
     height: 50px;
     margin-top: 20px;
-  }
-  
-  .hab .skill h3 {
+}
+
+.hab .skill h3 {
     margin-top: 10px;
     font-size: 16px;
-  }
+}
+
+footer {
+    background-color: var(--color2);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-weight: bold;
+}
+
+
