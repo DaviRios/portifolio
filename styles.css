@@ -122,6 +122,16 @@ header {
     transition: 0.3s;
 }
 
+.side-menu p {
+    padding: 8px 32px; /* Adjust padding to align text inside menu */
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--color1);
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
 .side-menu a:hover {
     color: #f1f1f1;
 }
@@ -162,6 +172,8 @@ body.menu-open {
     right: 0vw;
     max-width: 500px;
     max-height: 500px;
+    pointer-events: none;
+
 }
 
 .h1Back {
