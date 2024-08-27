@@ -96,6 +96,54 @@ header {
     width: 60px;
 }
 
+/* styles.css */
+/* styles.css */
+
+/* Style for the side menu */
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0; /* Changed from left to right */
+    background-color: #000000;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.side-menu a {
+    padding: 8px 32px; /* Adjust padding to align text inside menu */
+    text-decoration: none;
+    font-size: 25px;
+    color: var(--color1);
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    left: 25px; /* Changed from right to left */
+    font-size: 36px;
+    margin-right: 50px;
+}
+
+/* When the side menu is open */
+.side-menu.open {
+    width: 250px;
+}
+
+/* Add styles for body when menu is open */
+body.menu-open {
+    overflow: hidden;
+}
+
 .mainP {
     position: absolute;
     background-color: var(--color1);
@@ -159,13 +207,14 @@ header {
 }
 
 .hab .container {
-    position: absolute;
-    top: 100vh;
-    left: 2vw;
+    position: relative;
+    margin-top: 90vh;
+    left: 0vw;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
 }
+
 
 .hab .skill {
     color: black;
@@ -198,6 +247,92 @@ header {
     font-size: 16px;
 }
 
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    /* background-color: var(--color1); */
+    /* border: 1px solid var(--color2); */
+    display: none;
+    width: 150px;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 10px;
+}
+
+.dropdown li {
+    padding: 10px;
+    background-color: var(--color1);
+    border-bottom: 1px solid var(--color2);
+    white-space: nowrap;
+    border-radius: 20px;
+
+}
+
+.dropdown li:hover {
+    background-color: var(--color2);
+    ;
+}
+
+/* Exibir o dropdown ao passar o mouse */
+.skill:hover .dropdown {
+    display: block;
+}
+
+
+#projetos {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    margin-top: 180px;
+}
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projeto {
+    width: 250px;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-nome {
+    padding: 15px;
+}
+
+.container a {
+    font-size: medium;
+    color: #6495ED;
+    margin-top: 30px;
+}
+
+.tituloProjetos {
+    margin-bottom: 30px;
+    color: var(--color1);
+}
+
 footer {
     background-color: var(--color2);
     color: white;
@@ -208,5 +343,3 @@ footer {
     bottom: 0;
     font-weight: bold;
 }
-
-

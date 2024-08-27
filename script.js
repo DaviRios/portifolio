@@ -32,3 +32,13 @@ window.addEventListener('scroll', () => {
         contactSection.style.opacity = "0";
     }
 });
+
+document.getElementById('menuToggle').addEventListener('click', function() {
+    document.getElementById('sideMenu').classList.toggle('open');
+    document.body.classList.toggle('menu-open');
+});
+
+document.getElementById('closeMenu').addEventListener('click', function() {
+    document.getElementById('sideMenu').classList.remove('open');
+    document.body.classList.remove('menu-open');
+});
