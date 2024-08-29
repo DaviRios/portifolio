@@ -1,8 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 
 :root {
-    --color1: #1094E9;
-    /* Cor principal */
+    --color1: #1094E9;  
     --color2: #105ce9;
 }
 
@@ -34,7 +33,6 @@ header {
     overflow: hidden;
 }
 
-/* The navigation bar */
 .navbar {
     z-index: 1;
     overflow: hidden;
@@ -96,17 +94,13 @@ header {
     width: 60px;
 }
 
-/* styles.css */
-/* styles.css */
-
-/* Style for the side menu */
 .side-menu {
     height: 100%;
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
-    right: 0; /* Changed from left to right */
+    right: 0;
     background-color: #000000;
     overflow-x: hidden;
     transition: 0.5s;
@@ -114,7 +108,7 @@ header {
 }
 
 .side-menu a {
-    padding: 8px 32px; /* Adjust padding to align text inside menu */
+    padding: 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: var(--color1);
@@ -123,7 +117,7 @@ header {
 }
 
 .side-menu p {
-    padding: 8px 32px; /* Adjust padding to align text inside menu */
+    padding: 8px 32px;
     text-decoration: none;
     font-size: 25px;
     color: var(--color1);
@@ -139,17 +133,15 @@ header {
 .side-menu .closebtn {
     position: absolute;
     top: 0;
-    left: 25px; /* Changed from right to left */
+    left: 25px;
     font-size: 36px;
     margin-right: 50px;
 }
 
-/* When the side menu is open */
 .side-menu.open {
     width: 250px;
 }
 
-/* Add styles for body when menu is open */
 body.menu-open {
     overflow: hidden;
 }
@@ -173,7 +165,6 @@ body.menu-open {
     max-width: 500px;
     max-height: 500px;
     pointer-events: none;
-
 }
 
 .h1Back {
@@ -227,14 +218,12 @@ body.menu-open {
     justify-content: center;
 }
 
-
 .hab .skill {
     color: black;
     width: 150px;
     height: 150px;
     margin: 10px;
     background-color: var(--color1);
-    /* Dourado e laranja */
     border-radius: 10px;
     text-align: center;
     transition: transform 0.3s ease;
@@ -266,8 +255,6 @@ body.menu-open {
     position: absolute;
     left: 0;
     top: 100%;
-    /* background-color: var(--color1); */
-    /* border: 1px solid var(--color2); */
     display: none;
     width: 150px;
     z-index: 1;
@@ -281,19 +268,15 @@ body.menu-open {
     border-bottom: 1px solid var(--color2);
     white-space: nowrap;
     border-radius: 20px;
-
 }
 
 .dropdown li:hover {
     background-color: var(--color2);
-    ;
 }
 
-/* Exibir o dropdown ao passar o mouse */
 .skill:hover .dropdown {
     display: block;
 }
-
 
 #projetos {
     position: relative;
@@ -301,7 +284,6 @@ body.menu-open {
     text-align: center;
     margin-top: 180px;
 }
-
 
 .container {
     display: flex;
@@ -354,4 +336,77 @@ footer {
     width: 100%;
     bottom: 0;
     font-weight: bold;
+}
+
+
+/* For tablets and larger devices */
+@media screen and (max-width: 768px) {
+    .about-me, .hab .skill, .projeto {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .mainP {
+        width: 300px;
+        height: 300px;
+        right: 5vw;
+    }
+
+    .about-me p, .about-me p span {
+        font-size: 30px;
+        width: 80%;
+    }
+
+    .navbar {
+        height: 8vh;
+    }
+    
+    .side-menu a, .side-menu p {
+        font-size: 20px;
+    }
+
+    .dropdown {
+        width: auto;
+        font-size: 12px;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+    .navbar, .about-me, .mainP {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .navMenu {
+        right: 4vh;
+    }
+
+    .backgroundIcon, .icon, .mainP {
+        width: 50px;
+        height: 50px;
+        top: 5px;
+    }
+
+    .side-menu a, .side-menu p {
+        font-size: 18px;
+    }
+
+    .about-me p, .about-me p span {
+        font-size: 20px;
+        width: 90%;
+    }
+
+    .hab .skill {
+        width: 100px;
+        height: 100px;
+    }
+
+    .projeto {
+        width: 90%;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
