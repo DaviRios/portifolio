@@ -340,73 +340,54 @@ footer {
 
 
 /* For tablets and larger devices */
+/* Ajuste geral */
 @media screen and (max-width: 768px) {
+    .mainP {
+        width: 80vw;
+        height: auto;
+        right: 10vw;
+    }
     .about-me, .hab .skill, .projeto {
         width: 90%;
         margin: 20px auto;
     }
-
-    .mainP {
-        width: 5vw;
-        height: 5vh;
-        right: 5vw;
-    }
-
     .about-me p, .about-me p span {
-        font-size: 30px;
-        width: 80%;
+        font-size: 24px;
+        width: 100%;
     }
-
     .navbar {
         height: 8vh;
     }
-    
-    .side-menu a, .side-menu p {
-        font-size: 20px;
-    }
-
-    .dropdown {
-        width: auto;
-        font-size: 12px;
-    }
 }
 
-/* For mobile devices */
 @media screen and (max-width: 480px) {
     .navbar, .about-me, .mainP {
         width: 100%;
         padding: 10px;
     }
-
     .navMenu {
-        right: 4vh;
+        right: 2vh;
     }
-
-    .backgroundIcon, .icon, .mainP {
-        width: 50px;
-        height: 50px;
+    .backgroundIcon, .icon {
+        width: 40px;
+        height: 40px;
         top: 5px;
     }
-
     .side-menu a, .side-menu p {
-        font-size: 18px;
+        font-size: 16px;
     }
-
     .about-me p, .about-me p span {
-        font-size: 20px;
-        width: 90%;
+        font-size: 18px;
+        width: 95%;
     }
-
     .hab .skill {
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
-
     .projeto {
-        width: 90%;
+        width: 100%;
     }
-
     footer {
-        font-size: 12px;
+        font-size: 10px;
     }
 }
