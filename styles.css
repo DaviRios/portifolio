@@ -53,6 +53,22 @@ header {
     top: 5%;
 }
 
+.icon {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    pointer-events: none;
+    user-select: none;
+}
+
+.navMenu {
+    width: 6%;
+    position: absolute;
+    top: 0.5%;
+    right: 8%;
+}
+
 .navMenu div {
     height: 15px;
     background-color: var(--color2);
@@ -62,49 +78,318 @@ header {
     margin-left: auto;
 }
 
-.side-menu {
-    background-color: var(--color2);
+.one {
+    width: 60%;
 }
 
-.side-menu a, .side-menu p {
+.two {
+    width: 30%;
+}
+
+.three {
+    width: 45%;
+}
+
+.navMenu:hover div {
+    width: 60%;
+}
+
+.side-menu {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    background-color: var(--color2);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 5%;
+}
+
+.side-menu a {
+    padding: 2% 8%;
+    text-decoration: none;
+    font-size: 150%;
     color: var(--color1);
+    display: block;
+    transition: 0.3s;
+}
+
+.side-menu p {
+    padding: 2% 8%;
+    text-decoration: none;
+    font-size: 200%;
+    color: var(--color1);
+    display: block;
+    transition: 0.3s;
+    font-weight: bold;
+}
+
+.side-menu a:hover {
+    color: #f1f1f1;
+}
+
+.side-menu .closebtn {
+    position: absolute;
+    top: 0;
+    left: 80%;
+    font-size: 200%;
+}
+
+.side-menu.open {
+    width: 12%;
+}
+
+body.menu-open {
+    overflow: hidden;
 }
 
 .mainP {
+    position: absolute;
     background-color: var(--color1);
+    width: 26%;
+    height: 52.5%;
+    left: auto;
+    right: 11%;
+    top: 30%;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mainP .person {
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
 }
 
 .h1Back {
     background-color: var(--color1);
+    width: 17.5%;
+    height: 50px;
+    border-radius: 10px;
+    opacity: 30%;
+    z-index: 1;
+    position: relative; 
 }
 
-.about-me p, .about-me p span {
+.about-me {
+    position: relative;
+    top: 25rem;
+    left: 5%;
+    color: white;
+}
+
+.about-me h1 {
+    margin-top: -54px;
+    font-size: 25px;
+    padding: 15px;
+    opacity: 100%;
+    color: white;
+    z-index: 2;
+    position: relative;
+}
+
+.about-me p {
+    font-size: 40px;
     color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: left;
+    width: 40%;
+}
+
+.about-me p span {
+    font-size: 40px;
+    font-weight: bold;
+    color: var(--color1);
+    margin-bottom: 20px;
+    line-height: 1.5;
+    text-align: left;
+    width: 40%;
+}
+
+.hab .container {
+    position: relative;
+    margin-top: 35%;
+    left: 0%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hab .skill {
+    color: black;
+    width: 150px;
+    height: 150px;
+    margin: 10px;
     background-color: var(--color1);
-    color: #000000;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    padding: 40px 10px 10px 10px;
 }
 
 .hab .skill:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     background-color: var(--color2);
 }
 
+.hab .skill img {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.hab .skill h3 {
+    margin-top: 10px;
+    font-size: 16px;
+}
+
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    display: none;
+    width: 150px;
+    z-index: 1;
+    font-weight: bold;
+    font-size: 10px;
+}
+
 .dropdown li {
+    padding: 10px;
     background-color: var(--color1);
     border-bottom: 1px solid var(--color2);
+    white-space: nowrap;
+    border-radius: 20px;
 }
 
 .dropdown li:hover {
     background-color: var(--color2);
 }
 
+.skill:hover .dropdown {
+    display: block;
+}
+
+#projetos {
+    position: relative;
+    padding: 50px;
+    text-align: center;
+    margin-top: 180px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.projeto {
+    width: 250px;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.projeto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.projeto-nome {
+    padding: 15px;
+}
+
+.container a {
+    font-size: medium;
+    color: #6495ED;
+    margin-top: 30px;
+}
+
 .tituloProjetos {
+    margin-bottom: 3%;
     color: var(--color1);
 }
 
 footer {
     background-color: var(--color2);
     color: var(--color1);
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-weight: bold;
+}
+
+/* For tablets and larger devices */
+@media screen and (max-width: 768px) {
+    .mainP {
+        width: 80%;
+        height: auto;
+        right: 10%;
+    }
+    .about-me, .hab .skill, .projeto {
+        width: 90%;
+        margin: 20px auto;
+    }
+    .about-me p, .about-me p span {
+        font-size: 24px;
+        width: 100%;
+    }
+    .navbar {
+        height: 8%;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 480px) {
+    .navbar, .about-me, .mainP {
+        width: 100%;
+        padding: 10px;
+    }
+    .navMenu {
+        right: 2%;
+    }
+    .backgroundIcon, .icon {
+        width: 40px;
+        height: 40px;
+        top: 5px;
+    }
+    .side-menu a, .side-menu p {
+        font-size: 16px;
+    }
+    .about-me p, .about-me p span {
+        font-size: 18px;
+        width: 95%;
+    }
+    .hab .skill {
+        width: 80px;
+        height: 80px;
+    }
+    .projeto {
+        width: 100%;
+    }
+    footer {
+        font-size: 10px;
+    }
 }
