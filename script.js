@@ -14,13 +14,10 @@ const skills = [
     {
         category: "Programming and Development",
         items: [
-            "Front-end Coding",
+            "Front/Back-end",
             "Algorithms",
-            "Front-End Design",
             "Responsive Web Design",
             "Logic Programming",
-            "Back-end Coding",
-            "Back-end strategies"
         ]
     },
     {
@@ -29,19 +26,16 @@ const skills = [
             "Python",
             "JavaScript",
             "Java",
-            "C++",
             "C",
-            "C#",
-            "NoSQL"
         ]
     },
     {
         category: "Frameworks and Libraries",
         items: [
-            "React.js",
+            "React",
             "Git",
             "GitHub",
-            "Power BI: Basic"
+            "Node"
         ]
     },
     {
@@ -55,48 +49,11 @@ const skills = [
         ]
     },
     {
-        category: "Development Tools",
-        items: [
-            "Git",
-            "GitHub",
-            "Microsoft SQL Server",
-            "Power BI"
-        ]
-    },
-    {
-        category: "Data Analysis and Data Science",
-        items: [
-            "Data Science: Basic",
-            "Fund. of Statistics",
-            "Fund. of Data Science",
-            "Fund. of Data Mining",
-            "Fund. of Big Data",
-            "Microsoft Excel"
-        ]
-    },
-    {
         category: "Cloud Platforms and Services",
         items: [
             "Amazon Web Services"
         ]
     },
-    {
-        category: "Software Design and Architecture",
-        items: [
-            "Object-Oriented Prog",
-            "Object-Oriented Design",
-            "Design Patterns",
-            "Software Design Patterns"
-        ]
-    },
-    {
-        category: "Spreadsheets and Data Visualization",
-        items: [
-            "Microsoft Excel",
-            "Excel 2019",
-            "Power BI"
-        ]
-    }
 ];
 
 function generateSkillsHTML() {
