@@ -23,16 +23,19 @@ const skills = [
     {
         category: "Programming Languages",
         items: [
-            "Python",
+            "HTML5, CSS3",
             "JavaScript",
-            "Java",
-            "C",
+            "TypeScript",
+            "Python,Java,C",
+            "JavaScript(ES6+)",
         ]
     },
     {
         category: "Frameworks and Libraries",
         items: [
-            "React",
+            "React.js",
+            "Next.js",
+            "TailwindCSS",
             "Git",
             "GitHub",
             "Node"
