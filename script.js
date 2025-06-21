@@ -1,86 +1,23 @@
-document.getElementById('menuToggle').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão
-    document.getElementById('sideMenu').classList.toggle('open');
-    document.body.classList.toggle('menu-open');
-});
+fetch('stacks.json')
+    .then(res => res.json())
+    .then(stacks => {
+        const container = document.getElementById('stack-container');
 
-document.getElementById('closeMenu').addEventListener('click', function(event) {
-    event.preventDefault(); // Impede o comportamento padrão
-    document.getElementById('sideMenu').classList.remove('open');
-    document.body.classList.remove('menu-open');
-});
-
-const skills = [
-    {
-        category: "Programming and Development",
-        items: [
-            "Front/Back-end",
-            "Algorithms",
-            "Responsive Web Design",
-            "Logic Programming",
-        ]
-    },
-    {
-        category: "Programming Languages",
-        items: [
-            "HTML5, CSS3",
-            "JavaScript",
-            "TypeScript",
-            "Python,Java,C",
-            "JavaScript(ES6+)",
-        ]
-    },
-    {
-        category: "Frameworks and Libraries",
-        items: [
-            "React.js",
-            "Next.js",
-            "TailwindCSS",
-            "Git",
-            "GitHub",
-            "Node"
-        ]
-    },
-    {
-        category: "Databases",
-        items: [
-            "MySQL",
-            "PostgreSQL",
-            "Microsoft SQL Server",
-            "SQL Server",
-            "NoSQL"
-        ]
-    },
-    {
-        category: "Cloud Platforms and Services",
-        items: [
-            "Amazon Web Services"
-        ]
-    },
-];
-
-function generateSkillsHTML() {
-    const container = document.getElementById('skills-container'); 
-    container.innerHTML = '';
-    skills.forEach(skill => {
-        const skillDiv = document.createElement('div');
-        skillDiv.classList.add('skill');
-
-        const categoryHeading = document.createElement('h3');
-        categoryHeading.textContent = skill.category;
-        skillDiv.appendChild(categoryHeading);
-
-        const itemsList = document.createElement('ul');
-        itemsList.classList.add('dropdown');
-
-        skill.items.forEach(item => {
-            const listItem = document.createElement('li');
-            listItem.textContent = item;
-            itemsList.appendChild(listItem);
+        stacks.forEach(stack => {
+            const div = document.createElement('div');
+            div.classList.add('stack');
+            div.innerHTML = `
+        <img src="${stack.icon}" alt="${stack.name}">
+        <span>${stack.name}</span>
+      `;
+            container.appendChild(div);
         });
+    });
 
-        skillDiv.appendChild(itemsList);
-        container.appendChild(skillDiv); 
+function rollDown(pixels = 800, behavior = 'smooth') {
+    window.scrollBy({
+        top: pixels,
+        left: 0,
+        behavior: behavior
     });
 }
-window.onload = generateSkillsHTML;

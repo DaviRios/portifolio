@@ -28,122 +28,82 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    width: 100%;
-    overflow: hidden;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.navbar {
-    z-index: 1;
-    overflow: hidden;
-    background-color: var(--color1);
+body {
+    min-height: 100vh;
+    background: linear-gradient(#051f30, #000000);
+}
+
+.menu::-webkit-scrollbar {
+    display: none;
+}
+
+.menu {
     position: fixed;
     top: 0;
-    width: 100%;
-    height: 8%;
-}
-
-.backgroundIcon {
-    position: absolute;
-    background-color: var(--color2);
-    width: 75px;
-    height: 70px;
-    left: 8%;
-    border-radius: 80%;
-    top: 5%;
-}
-
-.icon {
-    position: absolute;
-    width: 100%;
-    height: 100%;
     left: 0;
-    pointer-events: none;
-    user-select: none;
-}
-
-.navMenu {
-    width: 6%;
-    position: absolute;
-    top: 0.5%;
-    right: 8%;
-}
-
-.navMenu div {
-    height: 15px;
-    background-color: var(--color2);
-    margin-top: 5%;
-    border-radius: 25px;
-    transition: 0.3s;
-    margin-left: auto;
-}
-
-.one {
-    width: 60%;
-}
-
-.two {
-    width: 30%;
-}
-
-.three {
-    width: 45%;
-}
-
-.navMenu:hover div {
-    width: 60%;
-}
-
-.side-menu {
+    width: 85px;
     height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: var(--color2);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 5%;
+    transition: .3s;
+    scrollbar-width: none;
+    overflow: hidden scroll;
+    background: #ffffff12;
+    -ms-overflow-style: none;
+    padding: 20px 20px 20px 0;
+    backdrop-filter: blur(5px);
+    box-shadow: 8px 0px 9px 0px #00000014;
+    z-index: 1000;
+    padding-top: 60px;
 }
 
-.side-menu a {
-    padding: 2% 8%;
-    text-decoration: none;
-    font-size: 150%;
-    color: var(--color1);
+.menu:hover {
+    width: 260px;
+}
+
+.menu:hover li span:nth-child(2) {
     display: block;
-    transition: 0.3s;
 }
 
-.side-menu p {
-    padding: 2% 8%;
+.menu-content li {
+    list-style: none;
+    border-radius: 0px 50px 50px 0;
+    transition: .3s;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    margin-top: 50px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.menu-content li:hover {
+    background: #0c0c0c;
+}
+
+.menu-content li span:nth-child(2) {
+    display: none;
+}
+
+a {
     text-decoration: none;
-    font-size: 200%;
-    color: var(--color1);
-    display: block;
-    transition: 0.3s;
-    font-weight: bold;
+    color: rgb(213, 213, 213);
+    display: flex;
+    align-items: center;
+    font-family: 'calibri';
 }
 
-.side-menu a:hover {
-    color: #f1f1f1;
+.material-symbols-outlined {
+    padding: 10px;
+    font-size: 25px;
+    margin-right: 10px;
+    border-radius: 50%;
+    background: #0c0c0c;
 }
 
-.side-menu .closebtn {
-    position: absolute;
-    top: 0;
-    left: 80%;
-    font-size: 200%;
-}
-
-.side-menu.open {
-    width: 12%;
-}
-
-body.menu-open {
-    overflow: hidden;
-}
 
 .mainP {
     position: absolute;
@@ -152,7 +112,7 @@ body.menu-open {
     height: 40%;
     left: auto;
     right: 11%;
-    top: 40%;
+    top: 20%;
     border-radius: 20px;
     display: flex;
     align-items: end;
@@ -174,13 +134,13 @@ body.menu-open {
     border-radius: 10px;
     opacity: 30%;
     z-index: 1;
-    position: relative; 
+    position: relative;
 }
 
 .about-me {
     position: relative;
-    top: 25rem;
-    left: 5%;
+    top: 15rem;
+    left: 10%;
     color: white;
 }
 
@@ -213,43 +173,113 @@ body.menu-open {
     width: 40%;
 }
 
-.hab .container {
-    position: relative;
-    margin-top: 35%;
-    left: 0%;
+
+.container {
+    padding: 20px;
+    text-align: center;
+}
+
+.content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 15%;
+}
+
+/* Arrow & Hover Animation */
+#more-arrows {
+    width: 75px;
+    height: 65px;
+
+    &:hover {
+
+        polygon {
+            fill: #FFF;
+            transition: all .2s ease-out;
+
+            &.arrow-bottom {
+                transform: translateY(-18px);
+            }
+
+            &.arrow-top {
+                transform: translateY(18px);
+            }
+
+        }
+
+    }
+
+}
+
+polygon {
+    fill: #FFF;
+    transition: all .2s ease-out;
+
+    &.arrow-middle {
+        opacity: 0.75;
+    }
+
+    &.arrow-top {
+        opacity: 0.5
+    }
+
+}
+
+#stacks {
+  text-align: center;
+  padding: 20px 20px;
+  margin: 23.8% 0 0 10%;
+  max-width: 80%;
+  position: relative;
+   
+}
+
+
+#stacks h2 {
+    font-size: 2rem;
+    color: var(--color1);
+    margin-bottom: 30px;
+}
+
+.stack-icons {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 }
 
-.hab .skill {
-    color: black;
-    width: 150px;
-    height: 150px;
-    margin: 10px;
-    background-color: var(--color1);
-    border-radius: 10px;
-    text-align: center;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-    padding: 40px 10px 10px 10px;
+.stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    transition: transform 0.3s;
 }
 
-.hab .skill:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
-    background-color: #f0bc2e;
+.stack img {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+    filter: drop-shadow(2px 2px 2px #00000050);
 }
 
-.hab .skill img {
-    width: 50px;
-    height: 50px;
-    margin-top: 20px;
+.stack span {
+    font-size: 0.9rem;
 }
 
-.hab .skill h3 {
-    margin-top: 10px;
-    font-size: 16px;
+.stack:hover {
+    transform: scale(1.1);
+    user-select: none;
+    /* impede seleção */
+    -webkit-user-drag: none;
+    /* impede arrastar (Safari/Chrome) */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* IE/Edge antigos) */
+
+
 }
 
 .dropdown {
@@ -286,7 +316,7 @@ body.menu-open {
     position: relative;
     padding: 50px;
     text-align: center;
-    margin-top: 180px;
+    margin-top: 100px;
 }
 
 .container {
@@ -349,14 +379,20 @@ footer {
         height: auto;
         right: 10%;
     }
-    .about-me, .hab .skill, .projeto {
+
+    .about-me,
+    .hab .skill,
+    .projeto {
         width: 90%;
         margin: 20px auto;
     }
-    .about-me p, .about-me p span {
+
+    .about-me p,
+    .about-me p span {
         font-size: 24px;
         width: 100%;
     }
+
     .navbar {
         height: 8%;
     }
@@ -364,32 +400,45 @@ footer {
 
 /* For mobile devices */
 @media screen and (max-width: 480px) {
-    .navbar, .about-me, .mainP {
+
+    .navbar,
+    .about-me,
+    .mainP {
         width: 100%;
         padding: 10px;
     }
+
     .navMenu {
         right: 2%;
     }
-    .backgroundIcon, .icon {
+
+    .backgroundIcon,
+    .icon {
         width: 40px;
         height: 40px;
         top: 5px;
     }
-    .side-menu a, .side-menu p {
+
+    .side-menu a,
+    .side-menu p {
         font-size: 16px;
     }
-    .about-me p, .about-me p span {
+
+    .about-me p,
+    .about-me p span {
         font-size: 18px;
         width: 95%;
     }
+
     .hab .skill {
         width: 80px;
         height: 80px;
     }
+
     .projeto {
         width: 100%;
     }
+
     footer {
         font-size: 10px;
     }
