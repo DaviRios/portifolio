@@ -227,12 +227,12 @@ polygon {
 }
 
 #stacks {
-  text-align: center;
-  padding: 20px 20px;
-  margin: 23.8% 0 0 10%;
-  max-width: 80%;
-  position: relative;
-   
+    text-align: center;
+    padding: 20px 20px;
+    margin: 23.8% 0 0 10%;
+    max-width: 80%;
+    position: relative;
+
 }
 
 
@@ -357,7 +357,6 @@ polygon {
 }
 
 .tituloProjetos {
-    margin-bottom: 3%;
     color: var(--color1);
 }
 
